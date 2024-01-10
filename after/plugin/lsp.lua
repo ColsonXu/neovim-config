@@ -1,16 +1,15 @@
 local lsp = require("lsp-zero")
 
+local lspconfig = require('lspconfig')
+lspconfig.ccls.setup {
+  init_options = {
+    cache = {
+      directory = ".ccls-cache";
+    };
+  }
+}
+
 lsp.preset("recommended")
-
--- DEPRECATED
--- lsp.ensure_installed({
---     'tsserver',
---     'pyright',
---     'rust_analyzer',
--- })
-
--- Fix Undefined global 'vim' EDIT: DEPRECATED
--- lsp.nvim_workspace()
 
 local cmp = require('cmp')
 local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}

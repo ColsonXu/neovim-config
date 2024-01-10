@@ -5,6 +5,7 @@ vim.keymap.set('i', '<C-/>', '<ESC>0i#<ESC>', { noremap = true })
 vim.keymap.set('n', '<C-/>', '0i#<ESC>', { noremap = true })
 vim.keymap.set('i', '<C-.>', '<ESC>0x<ESC>', { noremap = true })
 vim.keymap.set('n', '<C-.>', '0x', { noremap = true })
+vim.keymap.set('n', 'dg', ':bd<CR>', { noremap = true })
 
 -- quickly push changes to repo
 vim.keymap.set('', '<buffer> <F9>', ':w<CR>:exec "!push "changes""<CR>')
