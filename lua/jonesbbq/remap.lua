@@ -19,12 +19,12 @@ vim.keymap.set('', '<ESC>', ':noh<CR>', { silent = true })
 vim.keymap.set('i', '{<CR>', '{<CR>}<ESC>O', { noremap = true })
 
 -- debugger
--- vim.keymap.set('n', '<F5>', ':lua require"dap".toggle_breakpoint()<CR>', { noremap = true })
--- vim.keymap.set('i', '<F5>', ':lua require"dap".toggle_breakpoint()<CR>', { noremap = true })
--- vim.keymap.set('n', '<F6>', ':lua require"dap".continue()<CR>', { noremap = true })
--- vim.keymap.set('n', '<F7>', ':lua require"dap".step_into()<CR>', { noremap = true })
--- vim.keymap.set('n', '<F8>', ':lua require"dap".step_over()<CR>', { noremap = true })
--- vim.keymap.set('n', '<F4>', ':lua require"dapui".toggle()<CR>', { noremap = true })
+vim.keymap.set('n', '<F5>', ':lua require"dap".toggle_breakpoint()<CR>', { noremap = true })
+vim.keymap.set('i', '<F5>', ':lua require"dap".toggle_breakpoint()<CR>', { noremap = true })
+vim.keymap.set('n', '<F6>', ':lua require"dap".continue()<CR>', { noremap = true })
+vim.keymap.set('n', '<F7>', ':lua require"dap".step_into()<CR>', { noremap = true })
+vim.keymap.set('n', '<F8>', ':lua require"dap".step_over()<CR>', { noremap = true })
+vim.keymap.set('n', '<F4>', ':lua require"dapui".toggle()<CR>', { noremap = true })
 
 -- move highlighted line(s)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

@@ -2,14 +2,15 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    'tsserver',
-    'pyright',
-    'rust_analyzer',
-})
+-- DEPRECATED
+-- lsp.ensure_installed({
+--     'tsserver',
+--     'pyright',
+--     'rust_analyzer',
+-- })
 
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
+-- Fix Undefined global 'vim' EDIT: DEPRECATED
+-- lsp.nvim_workspace()
 
 local cmp = require('cmp')
 local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
