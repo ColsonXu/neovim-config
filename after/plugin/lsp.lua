@@ -1,11 +1,11 @@
 local lsp = require("lsp-zero")
 
 local lspconfig = require('lspconfig')
+
 lspconfig.ccls.setup {
   init_options = {
-    cache = {
-      directory = ".ccls-cache";
-    };
+    cache = { directory = ""; };
+    single_file_support = true;
   }
 }
 
@@ -16,7 +16,8 @@ local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
   sources = {
-    {name = 'nvim_lsp'},
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   },
   mapping = {
     ['<Tab>'] = cmp.mapping.confirm({select = true}),

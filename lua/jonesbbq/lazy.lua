@@ -41,10 +41,20 @@ require("lazy").setup({
   {'neovim/nvim-lspconfig'},
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/nvim-cmp'},
-  {'L3MON4D3/LuaSnip'},
+  {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    version = "v2.*",
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp",
+    dependencies = {"rafamadriz/friendly-snippets"},
+  },
+  {'saadparwaiz1/cmp_luasnip'},
 
   -- barbar
-  {'romgrk/barbar.nvim',
+  {
+    'romgrk/barbar.nvim',
     dependencies = {
       'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
       'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
